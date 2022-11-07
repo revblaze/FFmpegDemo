@@ -35,6 +35,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     viewController?.updateConsoleTextView()
   }
   
+  func collapseSourceView() {
+    mainWindow.makeKeyAndOrderFront(self)
+    let viewController = mainWindow.contentViewController as? ViewController
+    viewController?.collapseExecutableSourceView()
+  }
+  
+  func expandSourceView() {
+    mainWindow.makeKeyAndOrderFront(self)
+    let viewController = mainWindow.contentViewController as? ViewController
+    viewController?.expandExecutableSourceView()
+  }
+  
   func applicationWillTerminate(_ aNotification: Notification) {
     // Insert code here to tear down your application
   }

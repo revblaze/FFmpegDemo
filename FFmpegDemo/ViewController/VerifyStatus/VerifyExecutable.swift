@@ -23,12 +23,20 @@ extension ViewController {
     print(Console.Std.all)
   }
   
-  func updateExecutableStatus(_ consoleOutput: String) {
+  func updateExecutableStatus(_ consoleOutput: String, forPath: String) {
     StatusLog.stdOut = consoleOutput
     
     let status = getExecutableStatus(consoleOutput)
     endVerification(withStatus: status)
     addHeaderToConsole(consoleOutput, withStatus: status)
+    updateVerifiedExecutablePath(forPath, withStatus: status)
+  }
+  
+  func updateVerifiedExecutablePath(_ path: String, withStatus: VerifyStatus) {
+    if withStatus == .valid {
+      CommandLineBuilder.executablePath = path
+      verifiedExecutablePath = path
+    }
   }
   
   func verifyExecutable(atPath: String) {
@@ -45,7 +53,7 @@ extension ViewController {
       consoleOutput = String(describing: error)
     }
     
-    updateExecutableStatus(consoleOutput)
+    updateExecutableStatus(consoleOutput, forPath: atPath)
   }
   
   func addHeaderToConsole(_ output: String, withStatus: VerifyStatus) {

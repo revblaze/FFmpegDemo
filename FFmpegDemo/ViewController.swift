@@ -11,11 +11,12 @@ class ViewController: NSViewController, NSPopoverDelegate, NSTextFieldDelegate {
   
   // Executable Location Box
   @IBOutlet weak var executablePathTextField: NSTextField!
-  // Executable Action HUD Row
+  // Executable Source HUD Row
   @IBOutlet weak var verifyProgressIndicator: NSProgressIndicator!
   @IBOutlet weak var verifyStatusSymbolImageView: NSImageView!
   @IBOutlet weak var verifyExecutableButton: NSButton!
   @IBOutlet weak var statusLogButton: NSButton!
+  @IBOutlet weak var sourceViewHeightConstraint: NSLayoutConstraint!
   
   var verifiedExecutablePath = "/usr/local/bin/ffmpeg"
   
@@ -30,54 +31,22 @@ class ViewController: NSViewController, NSPopoverDelegate, NSTextFieldDelegate {
     super.viewDidLoad()
     
     initConsoleTextView()
-    
-    //commandPrefexTextField.delegate = self
-    
     initCommandLineView()
   }
   
-  @IBAction func inputFileBrowserButtonAction(_ sender: NSButton) {
-    openMediaFileBrowser()
+  func collapseExecutableSourceView() {
+    consoleTextView.enclosingScrollView?.contentInsets = NSEdgeInsets(top: 10, left: 10, bottom: 50, right: 6)
+    sourceViewHeightConstraint.animator().constant = 0
+    //consoleTextView.scrollToEndOfDocument(self)
   }
   
-  @IBAction func runShellCommand(_ sender: NSButton) {
-    
-  }
-  
-  func initCommandLineView() {
-    commandPrefexTextField.font = .monospacedSystemFont(ofSize: 12, weight: .medium)
-    inputFileTextField.font = .monospacedSystemFont(ofSize: 12, weight: .medium)
-    commandArgumentsTextField.font = .monospacedSystemFont(ofSize: 12, weight: .medium)
-    
-    inputFileTextField.alphaValue = 0.3
-  }
-  
-  struct CommandLine {
-    static var inputFilePath = ""
-    
-    static var arguments = ""
-    
-    static func getCleanFileName(_ forPath: String) -> String {
-      inputFilePath = forPath
-      return forPath.lastPathComponent
-    }
-    
-  }
-  
-  func setInputFileText(atPath: String) {
-    let text = CommandLine.getCleanFileName(atPath)
-    inputFileTextField.stringValue = text
-    inputFileTextField.alphaValue = 1.0
+  func expandExecutableSourceView() {
+    consoleTextView.enclosingScrollView?.contentInsets = NSEdgeInsets(top: 140, left: 10, bottom: 50, right: 6)
+    sourceViewHeightConstraint.animator().constant = 134
+    //consoleTextView.scrollToEndOfDocument(self)
   }
   
   
-  
-
-  override var representedObject: Any? {
-    didSet {
-    // Update the view, if already loaded.
-    }
-  }
   
   
 

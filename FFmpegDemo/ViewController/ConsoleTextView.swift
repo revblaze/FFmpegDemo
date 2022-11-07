@@ -13,6 +13,8 @@ extension ViewController: NSTextViewDelegate {
     consoleTextView.delegate = self
     
     renderConsoleTextView()
+    
+    consoleTextView.enclosingScrollView?.contentInsets = NSEdgeInsets(top: 140, left: 10, bottom: 50, right: 6)
   }
   
   func renderConsoleTextView() {

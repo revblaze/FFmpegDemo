@@ -22,6 +22,8 @@
 		C26F7A8A2919A6DC009F3A57 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F7A892919A6DC009F3A57 /* Console.swift */; };
 		C26F7A8C2919AF59009F3A57 /* ConsoleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F7A8B2919AF59009F3A57 /* ConsoleTextView.swift */; };
 		C26F7A8E2919B596009F3A57 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F7A8D2919B596009F3A57 /* WindowController.swift */; };
+		C26F7A902919C677009F3A57 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F7A8F2919C677009F3A57 /* CommandLine.swift */; };
+		C26F7A922919C76B009F3A57 /* CommandLineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F7A912919C76B009F3A57 /* CommandLineRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		C26F7A892919A6DC009F3A57 /* Console.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
 		C26F7A8B2919AF59009F3A57 /* ConsoleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleTextView.swift; sourceTree = "<group>"; };
 		C26F7A8D2919B596009F3A57 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		C26F7A8F2919C677009F3A57 /* CommandLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
+		C26F7A912919C76B009F3A57 /* CommandLineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				C26F7A892919A6DC009F3A57 /* Console.swift */,
+				C26F7A8F2919C677009F3A57 /* CommandLine.swift */,
 				C26F7A7229196EED009F3A57 /* Shell+SafeResponse.swift */,
 			);
 			path = CommandLine;
@@ -100,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				C26F7A8B2919AF59009F3A57 /* ConsoleTextView.swift */,
+				C26F7A912919C76B009F3A57 /* CommandLineRow.swift */,
 				C26F7A75291984B0009F3A57 /* FileBrowser.swift */,
 				C26F7A8229199542009F3A57 /* VerifyStatus */,
 			);
@@ -197,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26F7A902919C677009F3A57 /* CommandLine.swift in Sources */,
 				C26F7A7A29198738009F3A57 /* StatusLogViewController.swift in Sources */,
 				C26F7A8E2919B596009F3A57 /* WindowController.swift in Sources */,
 				C26F7A8A2919A6DC009F3A57 /* Console.swift in Sources */,
@@ -208,6 +215,7 @@
 				C26F7A7329196EED009F3A57 /* Shell+SafeResponse.swift in Sources */,
 				C26F7A6329196DE6009F3A57 /* AppDelegate.swift in Sources */,
 				C26F7A8629199597009F3A57 /* PerformVerification.swift in Sources */,
+				C26F7A922919C76B009F3A57 /* CommandLineRow.swift in Sources */,
 				C26F7A7F2919917A009F3A57 /* VerifyStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

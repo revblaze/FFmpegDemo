@@ -10,9 +10,8 @@ import Cocoa
 struct Console {
   
   struct Settings {
-    
+    // Full FFheader or shortened format
     static let showEntireHeader = true
-    
   }
   
   struct Std {
