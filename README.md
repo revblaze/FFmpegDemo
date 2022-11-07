@@ -1,3 +1,5 @@
+<img src="README/screen-large.png" />
+
 # FFmpegDemo
 
 The ultimate goal of this project is to provide a means of interfacing with the full FFmpeg package, while still being able to maintain MIT licensing, as well as publishing rights to the App Store.
