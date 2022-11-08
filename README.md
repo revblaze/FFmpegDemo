@@ -28,3 +28,6 @@ Interfacing features for an enhanced user experience:
 - Process monitoring with UI elements
     - Estimated duration of task
     - Percentage-based progress bar
+
+
+<img src="README/preview.gif" />
